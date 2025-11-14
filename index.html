@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proof of Subdomain Control</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: #0d0d0d;
+            color: #e6e6e6;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle at 20% 20%, #1a1a1a, #000000 70%);
+        }
+
+        .card {
+            background: #111;
+            padding: 40px;
+            border-radius: 16px;
+            width: 420px;
+            text-align: center;
+            box-shadow: 0 0 25px rgba(0, 255, 180, 0.12);
+            border: 1px solid rgba(0, 255, 180, 0.2);
+            animation: fadeIn 0.9s ease-out;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: #00ffb4;
+            margin-bottom: 10px;
+            text-shadow: 0 0 8px rgba(0, 255, 180, 0.5);
+        }
+
+        p {
+            font-size: 16px;
+            color: #bfbfbf;
+            margin-top: 8px;
+            line-height: 1.5;
+        }
+
+        .timestamp {
+            margin-top: 15px;
+            font-size: 13px;
+            color: #777;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Proof of Subdomain Control</h1>
+        <p>This domain was vulnerable to subdomain takeover.</p>
+        <p>No data is collected.<br>This is a harmless and ethical security demonstration.</p>
+        <div class="timestamp" id="ts"></div>
+    </div>
+
+    <script>
+        // Adds automatic timestamp
+        const ts = new Date().toLocaleString();
+        document.getElementById("ts").innerHTML = "Generated: " + ts;
+    </script>
+</body>
+</html>
